@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bilionare Club - Rechner</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <div class="brand">
+        <span class="brand-logo">🍽️</span>
+        <div>
+          <h1>Bilionare Club</h1>
+          <p>Exklusiv – für Mitglieder</p>
+        </div>
+      </div>
+      <button id="cart-toggle" class="cart-toggle" aria-label="Warenkorb öffnen">
+        🛒 Warenkorb
+        <span id="cart-badge" class="cart-badge" hidden>0</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="menu" aria-label="Speisekarte">
+      <nav class="filters" id="filters"></nav>
+      <div id="menu-list"></div>
+    </section>
+
+    <aside class="cart" id="cart" aria-label="Warenkorb">
+      <div class="cart-head">
+        <h2>Dein Warenkorb</h2>
+        <button id="cart-close" class="icon-btn" aria-label="Warenkorb schließen">✕</button>
+      </div>
+
+      <div id="cart-items" class="cart-items"></div>
+
+      <div class="cart-summary">
+        <div class="row"><span>Zwischensumme</span><span id="subtotal">0,00 $</span></div>
+        <div class="row total"><span>Gesamtsumme</span><span id="total">0,00 $</span></div>
+        <button id="checkout" class="checkout" disabled>Bestellung abschließen</button>
+        <button id="clear-cart" class="clear">Warenkorb leeren</button>
+        <p id="order-msg" class="order-msg" hidden></p>
+      </div>
+    </aside>
+  </main>
+
+  <div id="overlay" class="overlay" hidden></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
